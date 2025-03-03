@@ -39,11 +39,7 @@
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>2.0.16</version>
-		</dependency>
+	
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -61,20 +57,86 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.9.2</version>
 		</dependency>
+		
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- Optionally: parameterized tests support -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-params</artifactId>
 			<scope>test</scope>
+		</dependency> den trexoun apo maven coamands ta tests-->
+		
+			<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.16</version>
 		</dependency>
 
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>purchase</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>purchase.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		<profile>
+			<id>errorValidations</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>ErrorValidations.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+
+		</profile>
+		<profile>
+			<id>testng</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
@@ -122,6 +184,16 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.6.1</version>
 				</plugin>
+				<!-- <plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.5.2</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>-->
 			</plugins>
 		</pluginManagement>
 	</build>
