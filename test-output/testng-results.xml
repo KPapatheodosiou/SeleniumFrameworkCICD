@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-03T15:44:57 EET" name="Suite" finished-at="2025-03-03T15:45:13 EET" duration-ms="16012">
+    <groups>
+      <group name="Purchase">
+        <method signature="EndtoEndPageObject.submitOrder(java.util.HashMap)[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" name="submitOrder" class="endtoEndMaven.tests.EndtoEndPageObject"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2025-03-03T15:44:57 EET" name="Errors" finished-at="2025-03-03T15:45:13 EET" duration-ms="16012">
+      <class name="endtoEndMaven.tests.EndtoEndPageObject">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" started-at="2025-03-03T15:44:57 EET" name="launchApplication" finished-at="2025-03-03T15:45:00 EET" duration-ms="2352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" started-at="2025-03-03T15:45:00 EET" name="submitOrder" data-provider="getData" finished-at="2025-03-03T15:45:06 EET" duration-ms="5759" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Paok1926, product=IPHONE 13 PRO, email=papatheodosiou@test.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" started-at="2025-03-03T15:45:06 EET" name="tearDown" finished-at="2025-03-03T15:45:06 EET" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" started-at="2025-03-03T15:45:06 EET" name="launchApplication" finished-at="2025-03-03T15:45:07 EET" duration-ms="1704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" started-at="2025-03-03T15:45:07 EET" name="submitOrder" data-provider="getData" finished-at="2025-03-03T15:45:13 EET" duration-ms="5821" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Paok1926, product=ZARA COAT 3, email=papatheodosiou1@test.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:endtoEndMaven.tests.EndtoEndPageObject@44ebcd03]" started-at="2025-03-03T15:45:13 EET" name="tearDown" finished-at="2025-03-03T15:45:13 EET" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- endtoEndMaven.tests.EndtoEndPageObject -->
+    </test> <!-- Errors -->
+  </suite> <!-- Suite -->
+</testng-results>
