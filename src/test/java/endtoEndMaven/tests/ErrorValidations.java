@@ -67,4 +67,9 @@ public class ErrorValidations extends BaseTest{
 		
 	}
 
+	@Test
+	public void testWebhook() {
+		
+		System.out.println("Change to push the code to github 6 Mar 2025");
+	}
 }
